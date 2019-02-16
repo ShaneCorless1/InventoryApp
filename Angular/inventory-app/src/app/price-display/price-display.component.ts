@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-
-@Component({
-  selector: 'app-price-display',
-  templateUrl: './price-display.component.html',
-  styleUrls: ['./price-display.component.css']
-})
-export class PriceDisplayComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-}
+import {
+   Component,
+   Input
+   } from '@angular/core';
+  
+   /**
+   * @PriceDisplay: A component to show the price of a
+   * Product
+   */
+   @Component({
+   selector: 'price-display',
+   template: `
+   <div class="price-display">\${{ price }}</div>
+   `
+   })
+   export class PriceDisplayComponent {
+   @Input() price: number;
+   }
+  
